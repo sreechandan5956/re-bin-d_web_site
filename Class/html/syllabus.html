@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css"> <!-- Add a separate CSS file for styling -->
+    <script src="../js/scr.js"></script>
+
+    <title>Course Syllabus</title>
+    <style>
+        section {
+            padding: 2em;
+            background-color: #fff;
+        }
+        .tt {
+            background-color:#DAC0A3;
+            display: block;
+            margin: 0 auto; /* Centers the button horizontally */
+            text-align: center; /* Centers the button text */
+            padding: 10px 20px; /* Adjust padding for better appearance */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        .pdf-container {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="title-container">
+                <h1>Re-Bin-D</h1>
+                <h2>Batch 2022-26</h2>
+            </div>
+            <a href="../index.html" id="home-button">Home</a>
+            <button class="arrow-icon" onclick="goBack()">&#8592;</button>
+        </div>
+        <div class="header-right">
+            <img src="../images/tifac_core_in_cyber_security.png" class="logo1" alt="Logo">
+            <img src="../images/amrita_uncoloered.svg" alt="Amrita logo" class="logo2">
+        </div>
+    </header>
+    <br>
+
+    <h1 style="color: black;">Course Syllabus</h1>
+    <br>
+
+
+    <button class="tt" onclick="viewTimetable()">View Curriculum here</button>
+    <br>    <br>
+
+
+    <div class="pdf-container" id="pdf-container"></div>
+
+    <script>
+        function viewTimetable() {
+            var pdfLink = '../images/curriculum-syllabus-btech-computer-science-and-engineering-cyber-security-2020.pdf';
+            var pdfContainer = document.getElementById('pdf-container');
+            
+            // Create an iframe element
+            var iframe = document.createElement('iframe');
+            iframe.src = pdfLink;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none'; // Remove iframe border
+            
+            // Append the iframe to the container
+            pdfContainer.innerHTML = ''; // Clear previous content
+            pdfContainer.appendChild(iframe);
+        }
+    </script>
+
+    <div class="footerwrap">
+        <p class="foottxt">&copy; 2022-2026  Re-bin-d </p>
+    </div>
+  
+</body>
+</html>
