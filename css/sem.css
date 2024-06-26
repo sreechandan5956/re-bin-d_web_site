@@ -1,0 +1,58 @@
+ nav {
+            background-color: #444;
+            padding: 1em;
+        }
+
+        section.semester-layout {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 2em;
+        }
+
+        .semester {
+            flex: 0 0 45%;
+            background-color: #DAC0A3;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .semester:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .semester h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        .semester a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            height: 100%;
+        }
+
+       
+        #home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #home-button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
