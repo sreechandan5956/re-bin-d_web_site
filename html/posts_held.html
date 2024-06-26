@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/posts.css">
+
+    <script src="../js/scr.js"></script>
+    <title>Posts Held</title>
+  
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="title-container">
+                <h1>Re-Bin-D</h1>
+                <h2>Batch 2022-26</h2>
+            </div>
+            <a href="../index.html" id="home-button">Home</a>
+            <button class="arrow-icon" onclick="goBack()">&#8592;</button>
+        </div>
+        <div class="header-right">
+            <img src="../images/tifac_core_in_cyber_security.png" class="logo1" alt="Logo">
+            <img src="../images/amrita_uncoloered.svg" alt="Amrita logo" class="logo2">
+        </div>
+    </header>
+
+    <h1 style="color: black;">Posts Held</h1>
+
+    <section>
+        <p>Explore the various positions held by the members of the Re-Bin-D.</p>
+
+        <!-- Add search bar here -->
+        <div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" onkeyup="filterTable()" placeholder="Enter student name...">
+            <button onclick="clearSearch()">Clear</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Post Held</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adarsh R K</td>
+                    <td>Sports Representative</td>
+                </tr>
+                <tr>
+                    <td>Adithya N S</td>
+                    <td>Joint Secretary of WiCyS Club</td>
+                </tr>
+                <tr>
+                    <td>Agilprasanna P</td>
+                    <td>Executive Committee Member of Kolect Club</td>
+                </tr>
+             
+               
+            
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        function filterTable() {
+            var input, filter, table, tbody, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tbody = table.getElementsByTagName("tbody")[0];
+            tr = tbody.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the student name is in the first column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById("search").value = "";
+            filterTable();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(function (row) {
+                row.addEventListener('click', function () {
+                    this.classList.toggle('selected');
+                });
+            });
+        });
+    </script>
+
+<div class="footerwrap">
+    <p class="foottxt">&copy; 2022-2026  Re-bin-d </p>
+  </div>
+  
+</body>
+
+</html>
