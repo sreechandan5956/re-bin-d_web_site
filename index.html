@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Website</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <button class="button" id="backButton">
+    <div class="button-box">
+      <span class="button-elem">
+        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+        </svg>
+      </span>
+      <span class="button-elem">
+        <svg viewBox="0 0 46 40">
+          <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+        </svg>
+      </span>
+    </div>
+  </button>
+  
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="inputBx">
+          <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
+        <br>
+        <div class="inputBx">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <br>
+        <div class="inputBx">
+          <input type="submit" value="Sign in">
+        </div>
+      </form>
+      <div class="links">
+        <a href="html/forgot_password.html">Forget Password</a>
+        <a href="html/sighup.html">Signup</a>
+
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer2">
+    <p>&copy; 2022-2026 Re-bin-d</p>
+  </footer>
+
+  <script>
+    document.getElementById("backButton").addEventListener("click", function() {
+      window.location.href = "html/class.html"; // Replace with the URL you want to navigate to
+    });
+    
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      console.log('Sending login request:', { username, password });
+
+      const response = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      if (response.ok) {
+        alert('Login successful');
+        window.location.href = 'html/class.html';
+      } else {
+        alert('Invalid credentials');
+      }
+    });
+  </script>
+</body>
+</html>

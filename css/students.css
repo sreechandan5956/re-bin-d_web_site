@@ -1,0 +1,165 @@
+<style>
+        header{
+            height: 9.15rem;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .item {
+            background-color: #EEEEEE;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+    
+        
+
+        .description {
+            margin-top: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 20px;
+            top: 80px; /* Adjust this value to move the buttons lower */
+        }
+        .buttons button {
+            padding: 10px 0px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .home_button {
+            background-color: #2D2424;
+        }
+        .home_button {
+            position: relative;
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #76ABAE;
+            background: transparent;
+            cursor: pointer;
+            transition: ease-out 0.5s;
+            border: 2px solid #76ABAE;
+            border-radius: 10px;
+            box-shadow: inset 0 0 0 0 #76ABAE;
+            width: 4.5rem;
+        }
+        .home_button:hover {
+            color: white;
+            box-shadow: inset 0 -200px 0 0 #76ABAE;
+            width: 4.5rem;
+        }
+        .home_button:active {
+            transform: scale(0.9);
+        }
+    
+        .backbutton {
+            display: block;
+            position: relative;
+            width: 56px;
+            height: 56px;
+            margin: 0;
+            overflow: hidden;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            border: 0;
+        }
+
+        .backbutton:before,
+        .backbutton:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            inset: 7px;
+        }
+
+        .backbutton:before {
+            border: 4px solid #f0eeef;
+            transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+                transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+        }
+
+        .backbutton:after {
+            border: 4px solid #96daf0;
+            transform: scale(1.3);
+            transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0;
+        }
+
+        .backbutton:hover:before,
+        .backbutton:focus:before {
+            opacity: 0;
+            transform: scale(0.7);
+            transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .backbutton:hover:after,
+        .backbutton:focus:after {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+                transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+        }
+
+        .button-box {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .button-elem {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 17px 18px 0 18px;
+            transform: rotate(180deg);
+            fill: #f0eeef;
+        }
+
+        .backbutton:hover .button-box,
+        .backbutton:focus .button-box {
+            transition: 0.4s;
+            transform: translateX(-56px);
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .home_button {
+            margin-right: 15px; /* Add some spacing between the buttons */
+        }
+
+        .backbutton {
+            margin-left: auto; /* Push the back button to the right */
+        }
+        .description{
+            padding-left: 1rem;
+        }
+        .n{
+            text-align: center;
+        }
+        .description p {
+            line-height: 1.2; /* Adjust the line-height value as needed */
+            margin: 0; /* Remove default margin */
+        }
+    
