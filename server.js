@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/authDB', {
+mongoose.connect('mongodb://sreechandan2022:Mona_1234@ac-3tk3itq-shard-00-00.ta6j2ie.mongodb.net:27017,ac-3tk3itq-shard-00-01.ta6j2ie.mongodb.net:27017,ac-3tk3itq-shard-00-02.ta6j2ie.mongodb.net:27017/?replicaSet=atlas-dxhcap-shard-0&ssl=true&authSource=admin', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
