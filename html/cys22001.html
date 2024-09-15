@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="../css/class.css"> 
+    <link rel="stylesheet" href="../css/header.css"> 
+    <link rel="stylesheet" href="../css/students.css"> 
+    <style>
+      body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh; /* Ensure the body takes full height */
+      }
+
+      .student-profile {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 50px; /* Create a gap between the image and the information */
+}
+
+      .student-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 50px; /* Increase the margin to create more space */
+  padding-left: 190px;
+}
+.student-details {
+  max-width: 600px;
+  margin-left: 50px; /* Increase the margin to create more space */
+}
+
+      #footer2 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="buttons">
+                <button class="home_button" onclick="window.location.href='../html/class.html';">Home</button>
+                <button class="backbutton" onclick="goBack()">
+                    <div class="button-box">
+                      <span class="button-elem">
+                        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="button-elem">
+                        <svg viewBox="0 0 46 40">
+                          <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                </button>
+            </div>
+            <div class="text-container">
+                <h1 style="text-align: center;">Re-Bin-D</h1>
+                <h2 style="color: #D5CEA3;">Batch 2022-26</h2>
+            </div>
+            <div class="logos">
+                <img src="../images/tifac_core_in_cyber_security.png" class="logo1" alt="Tifac_Logo">
+                <img src="../images/amrita_uncoloered.svg" class="logo2" alt="Amrita_logo">
+            </div>
+        </div>
+    </header>
+
+    <section id="academic">
+        <div class="student-profile">
+            <img src="../images/" alt="Student Image" class="student-image">
+            <div class="student-details">
+                <h2>NAME</h2>
+                <p><strong>Roll Number:</strong> XXXXXX</p>
+                <p><strong>Course:</strong> B.Tech in Computer Science</p>
+                <p><strong>Email:</strong> XXXXXXX@example.com</p>
+                <p><strong>Interests:</strong> Coding, AI, Robotics</p>
+                <p><strong>Hobbies:</strong> Reading, Gaming, Traveling</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer2">
+        <p>&copy; 2022-2026 Re-bin-d</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="../css/student_c.css">
+    <link rel="stylesheet" href="../css/class.css"> 
+    <link rel="stylesheet" href="../css/header.css">      
+
+    <script src="../js/scr.js"></script>
+
+
+    <style>
+        .content__avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .content__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-container{
+            padding-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+       
+    
+    <header>
+        <div class="header-container">
+            <div class="buttons">
+              <button class="home_button" onclick="window.location.href='../html/class.html';">Home</button>
+               
+                <button class="backbutton" onclick="goBack()">
+                    <div class="button-box">
+                      <span class="button-elem">
+                        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="button-elem">
+                        <svg viewBox="0 0 46 40">
+                          <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+            </div>
+            <div class="text-container">
+                <h1 style="text-align: center; font-size: 32px;">Re-Bin-D</h1>
+                <h2 style="color: #D5CEA3;font-size: 24px;">Batch 2022-26</h2>
+            </div>
+            <div class="logos">
+                <img src="../images/tifac_core_in_cyber_security.png" class="logo1" alt="Tifac_Logo">
+                <img src="../images/amrita_uncoloered.svg" class="logo2" alt="Amrita_logo">
+            </div>
+        </div>
+    </header>
+    
+
+    <main class="cd__main">
+        <div class="profile-page" >
+            <div class="content">
+                <div class="content__cover">
+                    <div class="content__avatar">
+                        <img src="../images/gojo.jpg" alt="Profile Image">
+                    </div>
+                    <div class="content__bull"><span></span><span></span><span></span><span></span><span></span></div>
+                </div>
+                <div class="content__actions">
+                    <a href="#"><span>Previous</span></a>
+                    <a href="../html/ss2.html"><span>Next</span></a>
+                </div>
+                <div class="content__title">
+                    <h1 style="color: black;">Sree Chandan</h1><span><b>CB.EN.U4CYS22076</b></span>
+                </div>
+                <div class="content__description">
+                    <p><b>DOB</b>- 31<sup>st</sup> December 2004</p>
+                    <p><b>Gender</b>- MALE</p>
+                    
+
+                    <p><a href="https://www.linkedin.com/in/tangella-sree-chandan-44aa54249/">LinkedIn</a></p>
+                    <p><b>Certifications:-</b><br>1.<br>2.<br>3.</p>
+                </div>
+          
+                <div class="content__button">
+                    <a class="button" href="#">
+                        <div class="button__border"></div>
+                        <div class="button__bg"></div>
+                        <p class="button__text">Show more</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/student_navigation.js"></script>
+        <script src="../js/student_c.js"></script>
+
+    </main>
+
+
+    <div class="foot" >
+        <p> &copy; 2022-2026  Re-bin-d</p>
+      </div>
+    
+</body>
+
+</html>

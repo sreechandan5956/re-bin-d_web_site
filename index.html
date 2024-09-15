@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Website</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="../ui/css/class.css">
+
+  <style>
+    header {
+      background-color: #111;
+      color: aliceblue;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10rem;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .logo {
+      margin-left: 10px;
+    }
+
+    .logo1 {
+      height: 70px;
+    }
+
+    .logo2 {
+      height: 50px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      overflow-y: auto;
+      background-color: #111;
+    }
+
+    .content {
+      padding-top: 10px;
+      flex: 1;
+      padding-bottom: 5rem;
+    }
+
+    .ring {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    #footer2 {
+      background: #111;
+      color: #E5E5CB;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      margin-top: auto;
+      position: initial;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="text-container">
+      <h1 style="margin: 0;">Re-Bin-D</h1>
+      <h2 style="color: #D5CEA3; margin: 0;">Batch 2022-26</h2>
+    </div>
+    <div class="logos">
+      <img src="../ui/images/tifac_core_in_cyber_security.png" class="logo logo1" alt="Tifac_Logo">
+      <img src="../ui/images/amrita_uncoloered.svg" class="logo logo2" alt="Amrita_logo">
+    </div>
+  </header>
+  <div class="content">
+    <div class="ring">
+      <i style="--clr:#00ff0a;"></i>
+      <i style="--clr:#ff0057;"></i>
+      <i style="--clr:#fffd44;"></i>
+      <div class="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="inputBx">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="submit" value="Sign in">
+          </div>
+        </form>
+        <div class="links">
+          <a href="html/forgot_password.html">Forget Password</a>
+          <a href="html/signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer2">
+    <p>&copy; 2022-2026 Re-bin-d</p>
+  </footer>
+  <script>
+    // Simple login check without server
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      const correctUsername = "Re-bin-d";
+      const correctPassword = "2022-2026";
+
+      // Check if entered credentials are correct
+      if (username === correctUsername && password === correctPassword) {
+        alert('Login successful');
+        window.location.href = 'html/class.html'; // Redirect to the next page
+      } else {
+        alert('Invalid credentials');
+      }
+    });
+  </script>
+</body>
+</html>
